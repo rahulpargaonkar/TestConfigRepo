@@ -1,0 +1,34 @@
+{
+  "format_version" : 1,
+  "name": "repo1",
+  "enable_pipeline_locking": false,
+  "group" : "ConfigRepoDemo",
+  "environment_variables": [],
+  "materials": [
+    {
+      "url": "/Users/in-rahulpa/gitmaterial/b3",
+      "type": "git",
+      "name" : "mygit"
+    }
+  ],
+  "stages": [
+    {
+      "name": "defaultStage",
+      "jobs": [
+        {
+          "name": "defaultJob",
+          "tasks": [
+            {
+              "type": "exec",
+              "run_if": "passed",
+              "_command": "sleep",
+              "arguments": [
+               "5",
+              ]
+           }
+          ]
+        }
+      ]
+    }
+  ]
+}
